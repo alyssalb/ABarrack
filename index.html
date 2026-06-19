@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alyssa Barrack — Dramaturg, Scholar, Digital Practitioner</title>
+  <meta name="description" content="Alyssa Barrack is a PhD student and scholar-practitioner working at the intersection of dramaturgy, digital methods, critical analysis, and accessible technology pedagogy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HOME-SPECIFIC ── */
+    #hero {
+      min-height: 92vh; padding: 7rem 2rem 0;
+      background: var(--bg); position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    #hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    #hero .blob { width: 420px; height: 420px; background: var(--green-p); opacity: 0.68; top: -60px; right: -100px; }
+    #hero .blob2 { width: 280px; height: 280px; background: var(--orange-p); opacity: 0.65; bottom: 40px; left: -80px; }
+
+    h1.hero-name {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: 'opsz' 144;
+      font-weight: 900; font-size: clamp(3rem, 8vw, 5.2rem);
+      line-height: 1.0; display: inline-block; position: relative;
+    }
+    h1.hero-name .first { color: var(--orange); }
+
+    .hero-tagline {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: 'opsz' 9;
+      font-style: italic; font-weight: 300;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: var(--muted); margin: 1.25rem 0 1.75rem;
+      line-height: 1.6; max-width: 540px;
+    }
+    .hero-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+
+    .about-strip { background: var(--orange-p); padding: 4rem 2rem; position: relative; overflow: hidden; }
+    .about-strip .blob { width: 300px; height: 300px; background: var(--green-p); opacity: 0.6; bottom: -60px; right: -60px; }
+    .about-strip .blob2 { width: 180px; height: 180px; background: var(--pink-p); opacity: 0.55; top: 20px; left: -40px; }
+    .about-body { font-size: 16.5px; line-height: 1.8; }
+    .about-body p + p { margin-top: 1rem; }
+    .about-body a { color: var(--link); }
+    .about-body a:hover { color: var(--link-hover); }
+
+    .contact-strip { background: var(--green-p); padding: 4rem 2rem; position: relative; overflow: hidden; }
+    .contact-strip .blob { width: 220px; height: 220px; background: var(--blue-p); opacity: 0.55; top: -30px; right: -40px; }
+
+    .showcase-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+    @media(max-width:640px){ .showcase-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="index.html" class="nav-name"><span>Alyssa</span> Barrack</a>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html"      class="active">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="research.html">Research &amp; Writing</a></li>
+    <li><a href="pedagogy.html">Pedagogy</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Introduction">
+  <canvas id="glitter" aria-hidden="true"></canvas>
+  <div class="blob" aria-hidden="true"></div>
+  <div class="blob blob2" aria-hidden="true"></div>
+
+  <div class="container">
+    <p class="eyebrow">Dramaturg · Scholar · Digital Practitioner</p>
+    <div style="position:relative;display:inline-block;margin-bottom:0.35rem;">
+      <h1 class="hero-name"><span class="first">Alyssa</span><br>Barrack</h1>
+      <svg style="position:absolute;bottom:-5px;left:0;width:340px;height:13px;overflow:visible" viewBox="0 0 400 13" aria-hidden="true">
+        <path d="M2 6.5 Q30 1 58 6.5 Q86 12 114 6.5 Q142 1 170 6.5 Q198 12 226 6.5 Q254 1 282 6.5 Q310 12 338 6.5 Q366 1 394 6.5" stroke="#E8641A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <p class="hero-tagline">I'm interested in how the constraints and possibilities of digital forms shape what arguments get made — and who gets to make them.</p>
+    <nav class="hero-pills" aria-label="Site sections">
+      <a href="projects.html"  class="pill g">Projects</a>
+      <a href="research.html"  class="pill">Research &amp; Writing</a>
+      <a href="pedagogy.html"  class="pill g">Pedagogy</a>
+      <a href="cv.html"        class="pill">CV</a>
+    </nav>
+
+    <p class="eyebrow" style="margin-bottom:1rem;">Recent Work</p>
+    <div class="showcase-row">
+      <a href="https://alyssalb.github.io/TheRiverBrideDram/" class="showcase-card" target="_blank" rel="noopener" aria-label="The River Bride Dramaturgy Packet">
+        <img src="https://alyssalb.github.io/TheRiverBrideDram/images/gallery/amazonbutterfliesontheshore.jpeg" alt="Colorful butterflies on a Brazilian Amazon rivershore" class="showcase-img" loading="lazy">
+        <div class="showcase-body">
+          <p class="showcase-eyebrow">Dramaturgy · 2025</p>
+          <h3>The River Bride Dramaturgy Packet</h3>
+          <p>An interactive digital packet — photo galleries, mythology deep dives, and Amazon world-building for Marisela Treviño Orta's play.</p>
+          <span class="card-link">View packet &rarr;</span>
+        </div>
+      </a>
+      <a href="https://alyssalb.github.io/QwertyNotes/" class="showcase-card" target="_blank" rel="noopener" aria-label="Passing Notes: An Experiment in Digital Care">
+        <img src="https://alyssalb.github.io/QwertyNotes/image_1.png" alt="Keyboard layout diagram showing QWERTY and Dvorak mapping" class="showcase-img orange-bg" loading="lazy">
+        <div class="showcase-body">
+          <p class="showcase-eyebrow">Digital Art · 2024</p>
+          <h3>Passing Notes: An Experiment in Digital Care</h3>
+          <p>A generative love letter in Tracery — procedural kindness encoded in keyboard memory, made as a public act of care.</p>
+          <span class="card-link">View project &rarr;</span>
+        </div>
+      </a>
+      <a href="https://alyssalb.github.io/CozyHorrorDigitalEssay/" class="showcase-card" target="_blank" rel="noopener" aria-label="Cozy Horror: A Digital Essay">
+        <img src="https://alyssalb.github.io/CozyHorrorDigitalEssay/assets/images/OTGW_1_barcode.png" alt="Color barcode visualization of Over the Garden Wall Episode 1" class="showcase-img pink-bg" loading="lazy">
+        <div class="showcase-body">
+          <p class="showcase-eyebrow">Digital Essay · 2025</p>
+          <h3>Cozy Horror: A Digital Essay</h3>
+          <p>Computational and textual analysis identifying the shared aesthetic and narrative characteristics of an emerging horror subgenre.</p>
+          <span class="card-link">Read essay &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 70" fill="none" aria-hidden="true" style="margin-top:3rem;">
+    <path d="M0 35 C200 65 400 5 600 35 C800 65 1000 5 1200 35 C1320 55 1400 15 1440 35 L1440 70 L0 70 Z" fill="#FDF0E6"/>
+  </svg>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip" aria-label="About">
+  <div class="blob" aria-hidden="true"></div>
+  <div class="blob blob2" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow orange">About</p>
+    <div style="position:relative;display:inline-block;margin-bottom:1.5rem;">
+      <h2 class="section-heading">Who I Am</h2>
+      <svg style="position:absolute;bottom:-5px;left:0;width:200px;height:10px;overflow:visible" viewBox="0 0 220 10" aria-hidden="true">
+        <path d="M2 5 Q22 1 42 5 Q62 9 82 5 Q102 1 122 5 Q142 9 162 5 Q182 1 202 5" stroke="#4A8C3F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <span class="pull">Dramaturgs are there to ask questions, to cause friction, to reveal underlying structures and patterns, and bring them to light. I want to do that digitally, and I want to do that pedagogically.</span>
+    <div class="about-body">
+      <p>I'm a PhD student in the <a href="https://cah.ucf.edu/textstech/" target="_blank" rel="noopener">Texts and Technology program at UCF</a>, where I work at the intersection of dramaturgy, digital methods, critical and political analysis, and accessible technology pedagogy. I hold an MA in Interdisciplinary Studies from UCF and dual BAs in Theatre Arts and Professional Writing, Rhetoric, and Technology from USF.</p>
+      <p>As a teenager, I was extremely plugged into digital culture — making things, connecting with people, building weird little corners of the internet. As an adult scholar, I've gained some critical distance. I can see the pitfalls and perils of corporate digital control more clearly now. But I also see, with genuine awe, the beauty of all the things an untrained person can make and do on the internet — through DIY methods, open-source tools, generative AI, LLMs, and a basic willingness to break things and figure out how they work.</p>
+      <p>That tension — between digital forms as equalizers and the ways they rarely actually act as such — is where most of my work lives. I'm driven by the distinctly political history and present of dramaturgy, and by a belief that the tools of digital production are arguments, not just methods.</p>
+      <p>I'm also a <a href="https://www.ucf.edu/news/ucf-selected-for-national-endowment-for-the-humanities-project-on-ai-in-education/" target="_blank" rel="noopener">NEH Grant Fellow</a> and Co-Chair for Exhibitions and Performances at the <a href="https://elo.eliterature.org/" target="_blank" rel="noopener">Electronic Literature Organization 2026 Conference</a>.</p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 70" fill="none" aria-hidden="true" style="margin-top:3rem;">
+    <path d="M0 35 C250 60 550 5 850 30 C1050 48 1280 8 1440 28 L1440 70 L0 70 Z" fill="#EBF4EA"/>
+  </svg>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-strip" aria-label="Contact">
+  <div class="blob" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <div style="position:relative;display:inline-block;margin-bottom:1.75rem;">
+      <h2 class="section-heading">Get in Touch</h2>
+      <svg style="position:absolute;bottom:-5px;left:0;width:230px;height:10px;overflow:visible" viewBox="0 0 250 10" aria-hidden="true">
+        <path d="M2 5 Q25 1 48 5 Q71 9 94 5 Q117 1 140 5 Q163 9 186 5 Q209 1 232 5" stroke="#E8641A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <span class="pull green" style="margin-bottom:2rem;">Curious about my work? Interested in collaborating? I'm always happy to talk dramaturgy, digital methods, pedagogy, or the finer points of cozy horror.</span>
+    <div class="contact-block">
+      <div class="contact-row">
+        <span class="c-label">Email</span>
+        <a href="mailto:alyssa.barrack@ucf.edu">alyssa.barrack@ucf.edu</a>
+      </div>
+      <div class="contact-row">
+        <span class="c-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/abarrack/" target="_blank" rel="noopener">linkedin.com/in/abarrack</a>
+      </div>
+      <div class="contact-row">
+        <span class="c-label">Scholar</span>
+        <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=i48Z6NoAAAAJ" target="_blank" rel="noopener">Google Scholar Profile</a>
+      </div>
+      <div class="contact-row">
+        <span class="c-label">GitHub</span>
+        <a href="https://github.com/alyssalb" target="_blank" rel="noopener">github.com/alyssalb</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Alyssa Barrack &copy; 2026 &middot; Built with curiosity and a lot of squiggly underlines.</p>
+</footer>
+
+<button id="top-btn" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+    <path d="M9 14V4M4 9l5-5 5 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script src="shared.js"></script>
+</body>
+</html>
