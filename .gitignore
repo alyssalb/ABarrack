@@ -1,0 +1,6 @@
+# OS cruft
+.DS_Store
+
+# Private teaching source material — working docs with internal notes,
+# quiz answer keys, and unpublished drafts. Never publish to the live site.
+TeachingMaterials/
